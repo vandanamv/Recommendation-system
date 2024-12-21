@@ -1,6 +1,6 @@
 # **Movie Recommender System**
 
-This project is a **Movie Recommender System** built using **Streamlit** for the user interface. It recommends movies similar to a selected movie based on their similarity scores, and it displays their posters fetched from **The Movie Database (TMDb) API**.
+This project is a **Movie Recommender System** built using **Streamlit** for the user interface. It recommends movies similar to a selected movie based on their similarity scores and displays their posters fetched from **The Movie Database (TMDb) API**.
 
 ---
 
@@ -12,25 +12,14 @@ This project is a **Movie Recommender System** built using **Streamlit** for the
 
 ---
 
-## **How It Works**
+## **Required Libraries**
 
-### **1. Data Preprocessing**
-- A preprocessed movie dataset (`movies_dict.pkl`) is loaded into a Pandas DataFrame. This file contains metadata for movies, such as titles and TMDb IDs.  
-- A precomputed similarity matrix (`similarity.pkl`) is used to determine the similarity between movies.
+Ensure you have the following libraries installed in your environment:
 
-### **2. Recommendation Logic**
-- When a user selects a movie, its index is retrieved from the dataset.  
-- Using the similarity matrix, the top 5 most similar movies (excluding the selected movie itself) are identified.  
-- For each recommended movie, its poster is fetched from the **TMDb API**.
+- **Streamlit**: For building the user interface.
+- **Pandas**: For handling the movie dataset.
+- **Requests**: For making API calls to fetch movie posters.
 
-### **3. Displaying Results**
-- The recommended movies' names and posters are displayed in a grid layout with 5 columns using **Streamlit**.
-
----
-
-## **Installation**
-
-### **1. Clone the Repository**
+Install these libraries using the following command:
 ```bash
-git clone <repository_url>
-cd <repository_folder>
+pip install streamlit pandas requests
